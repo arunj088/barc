@@ -4,7 +4,7 @@
     <param name="sharpness" value="255"/>
     <param name="saturation" value="255"/>
     <param name="framerate" value="30"/>    
-    <param name="contrast" value="5"/>    
+    <param name="contrast" value="255"/>    
     <param name="video_device" value="/dev/video6"/>
   </node>
 
