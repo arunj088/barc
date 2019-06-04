@@ -122,7 +122,7 @@ def state_estimation():
     dt_vx   = rospy.get_param("state_estimation/dt_v_enc")     # time interval to compute v_x
 
     # get tire model
-    B   = rospy.get_param("tire_model/B")
+    Cf   = rospy.get_param("tire_model/Cf")
     C   = rospy.get_param("tire_model/C")
     mu  = rospy.get_param("tire_model/mu")
     TrMdl = ([B,C,mu],[B,C,mu])

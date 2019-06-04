@@ -7,13 +7,12 @@
     <param name="L_a" type="double" value="0.125" />
     <param name="L_b" type="double" value="0.125" />
     <!-- control parameters -->
-    <param name="input_gain" type="double" value="1.0" />
-    <param name="air_drag_coeff" type="double" value="0.1308" />
-    <param name="friction" type="double" value="0.1711" />
+    <param name="input_gain" type="double" value="1.7675" />
+    <param name="air_drag_coeff" type="double" value="0.33267" />
+    <param name="friction" type="double" value="0.12902" />
     <!-- tire parameters -->
-    <param name="tire_model/B" type="double" value="0.3" />
-    <param name="tire_model/C" type="double" value="1.25" />
-    <param name="tire_model/mu" type="double" value="0.234" />
+    <param name="tire_model/Cf" type="double" value="6.0823" />
+    <param name="tire_model/Cr" type="double" value="6.0823" />
 	<param name="run_time" type="double" value="5.0" />
 	<param name="step_time" type="double" value="2.0" />
 	<param name="motor_input" type="double" value="0.0" />
