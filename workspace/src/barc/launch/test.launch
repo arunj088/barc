@@ -2,8 +2,8 @@
 
     <!-- SYSTEM MODEL -->
     <!-- vehicle parameters -->
-    <param name="m" type="double" value="1.98" />
-    <param name="I_z" type="double" value="0.24" />
+    <param name="m" type="double" value="3.8" />
+    <param name="I_z" type="double" value="0.20741" />
     <param name="L_a" type="double" value="0.125" />
     <param name="L_b" type="double" value="0.125" />
     <!-- control parameters -->
