@@ -104,7 +104,7 @@ def f_6s(z, u, vhMdl, trMdl, F_ext, dt):
     input: state z at time k, z[k] := [X[k], Y[k], phi[k], v_x[k], v_y[k], r[k]])
     output: state at next time step z[k+1]
     """
-    
+    b0 = rospy.get_param("motor_gain")
     # get states / inputs
     X       = z[0]
     Y       = z[1]
@@ -119,14 +119,8 @@ def f_6s(z, u, vhMdl, trMdl, F_ext, dt):
     # extract parameters
     (a,b,m,I_z)             = vhMdl
     (a0, Ff)                = F_ext
-    (trMdlFront, trMdlRear) = trMdl
-    (B,C,mu)                = trMdlFront
-    g                       = 9.81
-    Fn                      = m*g/2.0         # assuming a = b (i.e. distance from CoG to either axel)
+    (Cf, Cr) = trMdl
 
-    # limit force to tire friction circle
-    if FxR >= mu*Fn:
-        FxR = mu*Fn
 
     # comptue the front/rear slip  [rad/s]
     # ref: Hindiyeh Thesis, p58
@@ -134,22 +128,17 @@ def f_6s(z, u, vhMdl, trMdl, F_ext, dt):
     a_R     = arctan((v_y - b*r)/v_x)
 
     # compute lateral tire force at the front
-    TM_param    = [B, C, mu*Fn]
-    FyF         = -f_pajecka(TM_param, a_F)
+    FyF         = -f_linearTire(Cf, a_F)
 
     # compute lateral tire force at the rear
     # ensure that magnitude of longitudinal/lateral force lie within friction circle
-    FyR_paj     = -f_pajecka(TM_param, a_R)
-    FyR_max     = sqrt((mu*Fn)**2 - FxR**2)
-    Fy          = array([FyR_max, FyR_paj])
-    idx         = argmin(abs(Fy))
-    FyR         = Fy[idx]
+    FyR     = -f_linearTire(Cr, a_R)
 
     # compute next state
     X_next      = X + dt*(v_x*cos(phi) - v_y*sin(phi)) 
     Y_next      = Y + dt*(v_x*sin(phi) + v_y*cos(phi)) 
     phi_next    = phi + dt*r
-    v_x_next    = v_x + dt*(r*v_y +1/m*(FxR - FyF*sin(d_f)) - a0*v_x**2 - Ff)
+    v_x_next    = v_x + dt*(r*v_y +1/m*(b0*FxR - FyF*sin(d_f)) - a0*v_x**2 - Ff)
     v_y_next    = v_y + dt*(-r*v_x +1/m*(FyF*cos(d_f) + FyR))
     r_next      = r    + dt/I_z*(a*FyF*cos(d_f) - b*FyR)
 
@@ -175,7 +164,15 @@ def h_3s(x):
     C = array([[1, 0, 0],
                [0, 0, 1]])
     return dot(C, x)
-    
+
+def h_6s(x):
+    """
+    measurement model
+    input := state z at time k, z[k] := [X[k], Y[k], phi[k], v_x[k], v_y[k], r[k]]
+    output := [v_x, r]
+    """
+    C = array([[0, 0, 0, 1, 0, 0], [0, 0, 0, 0, 0, 1]])
+    return dot(C, x)
    
 def f_pajecka(trMdl, alpha):
     """

@@ -21,7 +21,7 @@ from sensor_msgs.msg import Imu
 from geometry_msgs.msg import Vector3
 from numpy import pi, cos, sin, eye, array, zeros
 from ekf import ekf
-from system_models import f_3s, h_3s
+from system_models import f_6s, h_6s
 from tf import transformations
 from numpy import unwrap
 
@@ -123,9 +123,8 @@ def state_estimation():
 
     # get tire model
     Cf   = rospy.get_param("tire_model/Cf")
-    C   = rospy.get_param("tire_model/C")
-    mu  = rospy.get_param("tire_model/mu")
-    TrMdl = ([B,C,mu],[B,C,mu])
+    Cr   = rospy.get_param("tire_model/Cr")
+    TrMdl = (Cf, Cr)
 
     # get external force model
     a0  = rospy.get_param("air_drag_coeff")
@@ -133,8 +132,9 @@ def state_estimation():
 
     # get EKF observer properties
     q_std   = rospy.get_param("state_estimation/q_std")             # std of process noise
-    r_std   = rospy.get_param("state_estimation/r_std")             # std of measurementnoise
-    v_x_min     = rospy.get_param("state_estimation/v_x_min")  # minimum velociy before using EKF
+    r_std_v   = rospy.get_param("state_estimation/r_std_v")             # std of measurementnoise
+    r_std_r   = rospy.get_param("state_estimation/r_std_r")
+    v_x_min     = rospy.get_param("state_estimation/v_x_min")  # minimum velocity before using EKF
 
 	# set node rate
     loop_rate 	= 50
@@ -143,20 +143,19 @@ def state_estimation():
     t0 			= time.time()
 
     # estimation variables for Luemberger observer
-    z_EKF       = array([1.0, 0.0, 0.0])
+    z_EKF       = array([0.000001, 0.0, 0.0])
 
     # estimation variables for EKF
-    P           = eye(3)                # initial dynamics coveriance matrix
-    Q           = (q_std**2)*eye(3)     # process noise coveriance matrix
-    R           = (r_std**2)*eye(2)     # measurement noise coveriance matrix
-
+    P           = 0*eye(6)                # initial dynamics coveriance matrix
+    Q           = (q_std**2)*eye(6)     # process noise coveriance matrix
+    R           = array([[r_std_v**2, r_std_v*r_std_r], [r_std_v*r_std_r, r_std_r**2]])  # measurement noise covariance
     while not rospy.is_shutdown():
 
 		# publish state estimate
         (v_x, v_y, r) = z_EKF           # note, r = EKF estimate yaw rate
 
         # publish information
-        state_pub.publish( Vector3(v_x, v_y, r) )
+        state_pub.publish(Vector3(v_x, v_y, r))
 
         # apply EKF
         if v_x_enc > v_x_min:
@@ -171,7 +170,7 @@ def state_estimation():
             args = (u, vhMdl, TrMdl, F_ext, dt) 
 
             # apply EKF and get each state estimate
-            (z_EKF,P) = ekf(f_3s, z_EKF, P, h_3s, y, Q, R, args )
+            (z_EKF,P) = ekf(f_6s, z_EKF, P, h_6s, y, Q, R, args )
 
         else:
             z_EKF[0] = float(v_x_enc)

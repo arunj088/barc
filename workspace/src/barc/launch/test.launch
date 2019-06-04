@@ -49,7 +49,8 @@
     </node>
 
 <!-- OBSERVER-->
-    <node pkg="barc" type="ekf_Dyn.py" name="state_estimation">
+    <group ns="state_estimation">
+    <!-- <node pkg="barc" type="ekf_Dyn.py" name="state_estimation"> -->
         <!-- v_x estimation sample time-->
         <param name="dt_v_enc" type="double" value="0.2" />
 
@@ -57,7 +58,8 @@
         <param name="q_std" type="double" value="0.0001" />
         <param name="r_std_r" type="double" value="0.57" />
         <param name="r_std_v" type="double" value="1.2767" />
-    </node>
+    </group>
+    <!--</node>-->
 
 		
 <!-- LOW LEVEL CONTROLLER -->

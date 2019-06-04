@@ -30,7 +30,7 @@ str_ang_max = 35
 str_ang_min = -35
 
 def pwm_converter_callback(msg):
-    global motor_pwm, servo_pwm, b0
+    global motor_pwm, servo_pwm
     global str_ang_max, str_ang_min
 
     # translate from SI units in vehicle model
@@ -42,7 +42,7 @@ def pwm_converter_callback(msg):
 
     # compute motor command
     FxR         =  float(msg.motor) 
-    motor_pwm   =  FxR/b0 + 94.0
+    motor_pwm   =  FxR + 94.0
 	
     update_arduino()
 
@@ -58,11 +58,10 @@ def update_arduino():
     ecu_pub.publish(ecu_cmd)
 
 def arduino_interface():
-    global ecu_pub, b0		
+    global ecu_pub
 
     # launch node, subscribe to motorPWM and servoPWM, publish ecu
     init_node('arduino_interface')
-    b0  = get_param("input_gain")
 
     Subscriber('ecu', ECU, pwm_converter_callback, queue_size = 1)
     ecu_pub = Publisher('ecu_pwm', ECU, queue_size = 1)
