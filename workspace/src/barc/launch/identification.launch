@@ -1,0 +1,8 @@
+<launch>
+<!-- launch the identification node -->
+	<node pkg="barc" type="identification.py" name ="identification" output="screen" />
+
+<!-- Record the experiment data -->
+    <node pkg="rosbag" type="record" name="rosbag_record" args="record -O trial.bag /vel_est /imu/data /ecu" />
+
+</launch>

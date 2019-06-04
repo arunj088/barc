@@ -1,0 +1,6 @@
+<launch>
+	<!-- LIDAR -->
+    <node pkg="rplidar_ros" type="rplidarNode" name="lidar">
+        <param name="serial_port" value="/dev/ttyUSB1" />
+    </node>
+</launch>
