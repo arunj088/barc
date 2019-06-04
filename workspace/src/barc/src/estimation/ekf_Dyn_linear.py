@@ -110,6 +110,7 @@ def state_estimation():
     rospy.Subscriber('encoder', Encoder, enc_callback)
     rospy.Subscriber('ecu', ECU, ecu_callback)
     state_pub 	= rospy.Publisher('state_estimate', Vector3, queue_size = 10)
+    pose_pub  = rospy.Publisher('pose_estimate', Vector3, queue_size= 10)
 
 	# get vehicle dimension parameters
     L_a = rospy.get_param("L_a")       # distance from CoG to front axel
@@ -156,6 +157,7 @@ def state_estimation():
 
         # publish information
         state_pub.publish(Vector3(v_x, v_y, r))
+        pose_pub.publish(Vector3(X, Y, yaw))
 
         # apply EKF
         if v_x_enc > v_x_min:
