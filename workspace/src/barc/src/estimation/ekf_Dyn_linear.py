@@ -143,7 +143,7 @@ def state_estimation():
     t0 			= time.time()
 
     # estimation variables for Luemberger observer
-    z_EKF       = array([0.000001, 0.0, 0.0])
+    z_EKF       = array([0.0, 0.0, 0.0, 0.000001, 0.0, 0.0])
 
     # estimation variables for EKF
     P           = 0*eye(6)                # initial dynamics coveriance matrix
@@ -152,7 +152,7 @@ def state_estimation():
     while not rospy.is_shutdown():
 
 		# publish state estimate
-        (v_x, v_y, r) = z_EKF           # note, r = EKF estimate yaw rate
+        (X, Y, yaw, v_x, v_y, r) = z_EKF      # note, r = EKF estimate yaw rate
 
         # publish information
         state_pub.publish(Vector3(v_x, v_y, r))
@@ -173,8 +173,8 @@ def state_estimation():
             (z_EKF,P) = ekf(f_6s, z_EKF, P, h_6s, y, Q, R, args )
 
         else:
-            z_EKF[0] = float(v_x_enc)
-            z_EKF[2] = float(w_z)
+            z_EKF[3] = float(v_x_enc)
+            z_EKF[5] = float(w_z)
         
 		# wait
         rate.sleep()
