@@ -190,7 +190,10 @@ def f_pajecka(trMdl, alpha):
     (b,c,d) = trMdl
     return  d*sin(c*arctan(b*alpha)) 
 
-
+def f_linearTire(C, alpha):
+    return C*alpha
+    
+    
 def f_KinBkMdl(z,u,vhMdl, dt):
     """
     process model
@@ -227,4 +230,5 @@ def h_KinBkMdl(x):
     """
     C = eye(4)
     return dot(C, x)
+
  
