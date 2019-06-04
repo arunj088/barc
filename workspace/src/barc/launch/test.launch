@@ -53,7 +53,7 @@
     <!-- <node pkg="barc" type="ekf_Dyn.py" name="state_estimation"> -->
         <!-- v_x estimation sample time-->
         <param name="dt_v_enc" type="double" value="0.2" />
-
+        <param name="v_x_min" type="double" value="0.2" />
         <!-- ekf properties -->
         <param name="q_std" type="double" value="0.0001" />
         <param name="r_std_r" type="double" value="0.57" />
