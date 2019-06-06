@@ -148,7 +148,7 @@ def state_estimation():
     # estimation variables for EKF
     P           = 0*eye(6)                # initial dynamics coveriance matrix
     Q           = (q_std**2)*eye(6)     # process noise coveriance matrix
-    R           = array([[r_std_v**2, 0.0, 0.0], [0.0, r_std_r**2, 0.0], [0.0, 0.0, r_std_r**2]])  # measurement noise covariance
+    R           = array([[r_std_v**2, 0.0, 0.0], [0.0, r_std_r**2, 0.0], [0.0, 0.0, 0.1**2]])  # measurement noise covariance
     while not rospy.is_shutdown():
 
 		# publish state estimate
