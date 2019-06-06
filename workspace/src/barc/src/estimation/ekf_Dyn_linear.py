@@ -143,7 +143,7 @@ def state_estimation():
     t0 			= time.time()
 
     # estimation variables for Luemberger observer
-    z_EKF       = array([0.0, 0.0, 0.0, 1, 0.0, 0.0])
+    z_EKF       = array([0.0, 0.0, 0.0, 1.0, 0.0, 0.0])
 
     # estimation variables for EKF
     P           = 0*eye(6)                # initial dynamics coveriance matrix
