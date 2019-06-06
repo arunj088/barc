@@ -169,9 +169,9 @@ def h_6s(x):
     """
     measurement model
     input := state z at time k, z[k] := [X[k], Y[k], phi[k], v_x[k], v_y[k], r[k]]
-    output := [v_x, r]
+    output := [v_x, r, yaw_angle]
     """
-    C = array([[0, 0, 0, 1, 0, 0], [0, 0, 0, 0, 0, 1]])
+    C = array([[0, 0, 0, 1, 0, 0], [0, 0, 0, 0, 0, 1], [0, 0, 1, 0, 0, 0]])
     return dot(C, x)
    
 def f_pajecka(trMdl, alpha):
