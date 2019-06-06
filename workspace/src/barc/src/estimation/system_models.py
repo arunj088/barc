@@ -104,7 +104,7 @@ def f_6s(z, u, vhMdl, trMdl, F_ext, dt):
     input: state z at time k, z[k] := [X[k], Y[k], phi[k], v_x[k], v_y[k], r[k]])
     output: state at next time step z[k+1]
     """
-    b0 = rospy.get_param("motor_gain")
+    b0 = rospy.get_param("input_gain")
     # get states / inputs
     X       = z[0]
     Y       = z[1]

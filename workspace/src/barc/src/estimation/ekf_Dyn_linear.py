@@ -80,9 +80,9 @@ def enc_callback(data):
 	n_FR = data.FR
 
 	# compute time elapsed
+	#tf = time.time()
 	tf = time.time()
 	dt = tf - t0
-	
 	# if enough time elapse has elapsed, estimate v_x
 	dt_min = 0.20
 	if dt >= dt_min:
@@ -92,8 +92,7 @@ def enc_callback(data):
 
 		# update encoder v_x, v_y measurements
 		# only valid for small slip angles, still valid for drift?
-		v_x_enc 	= (v_FL + v_FR)/2.0*cos(d_f)
-
+		v_x_enc 	= (v_FL + v_FL)/2.0*cos(d_f)
 		# update old data
 		n_FL_prev   = n_FL
 		n_FR_prev   = n_FR
@@ -109,8 +108,8 @@ def state_estimation():
     rospy.Subscriber('imu/data', Imu, imu_callback)
     rospy.Subscriber('encoder', Encoder, enc_callback)
     rospy.Subscriber('ecu', ECU, ecu_callback)
-    state_pub 	= rospy.Publisher('state_estimate', Vector3, queue_size = 10)
-    pose_pub  = rospy.Publisher('pose_estimate', Vector3, queue_size= 10)
+    state_pub 	= rospy.Publisher('state_estimate', Vector3, queue_size = 1)
+    pose_pub  = rospy.Publisher('pose_estimate', Vector3, queue_size= 1)
 
 	# get vehicle dimension parameters
     L_a = rospy.get_param("L_a")       # distance from CoG to front axel
@@ -138,18 +137,18 @@ def state_estimation():
     v_x_min     = rospy.get_param("state_estimation/v_x_min")  # minimum velocity before using EKF
 
 	# set node rate
-    loop_rate 	= 50
+    loop_rate 	= 7.6
     dt 		    = 1.0 / loop_rate
     rate 		= rospy.Rate(loop_rate)
     t0 			= time.time()
 
     # estimation variables for Luemberger observer
-    z_EKF       = array([0.0, 0.0, 0.0, 0.000001, 0.0, 0.0])
+    z_EKF       = array([0.0, 0.0, 0.0, 0.2, 0.0, 0.0])
 
     # estimation variables for EKF
     P           = 0*eye(6)                # initial dynamics coveriance matrix
     Q           = (q_std**2)*eye(6)     # process noise coveriance matrix
-    R           = array([[r_std_v**2, r_std_v*r_std_r], [r_std_v*r_std_r, r_std_r**2]])  # measurement noise covariance
+    R           = array([[r_std_v**2, 0.0], [0.0, r_std_r**2]])  # measurement noise covariance
     while not rospy.is_shutdown():
 
 		# publish state estimate
