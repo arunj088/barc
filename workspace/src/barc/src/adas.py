@@ -12,7 +12,7 @@ from rospy import init_node, Subscriber, Publisher, get_param
 from rospy import Rate, is_shutdown, ROSInterruptException
 from sensor_msgs.msg import Imu, LaserScan
 from std_msgs.msg import Float32, Float32MultiArray
-from geometry_msg.msg import Vector3
+from geometry_msgs.msg import Vector3
 from barc.msg import ECU, Encoder
 from math import pi
 from numpy import zeros, array
