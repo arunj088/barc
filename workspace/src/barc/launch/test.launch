@@ -50,7 +50,7 @@
 
 <!-- OBSERVER-->
     <!-- group ns="state_estimation"> -->
-    <node pkg="barc" type="ekf_Dyn.py" name="state_estimation">
+    <node pkg="barc" type="ekf_Dyn_linear.py" name="state_estimation">
         <!-- v_x estimation sample time-->
         <param name="dt_v_enc" type="double" value="0.2" />
         <param name="v_x_min" type="double" value="0.2" />
