@@ -57,7 +57,7 @@
         <!-- ekf properties -->
         <param name="q_std" type="double" value="0.01" />
         <param name="r_std_r" type="double" value="0.57" />
-        <param name="r_std_v" type="double" value="2.2767" />
+        <param name="r_std_v" type="double" value="1.2767" />
     </group>
     <!--</node>-->
 
