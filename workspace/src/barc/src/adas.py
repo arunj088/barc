@@ -70,7 +70,7 @@ def imu_callback(data):
 
 def pose_callback(data):
     global est_yaw 
-    est_yaw = data.Z
+    est_yaw = data.z
 
 def laser_callback(data):
     global dist
