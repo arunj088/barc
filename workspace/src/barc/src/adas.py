@@ -12,6 +12,7 @@ from rospy import init_node, Subscriber, Publisher, get_param
 from rospy import Rate, is_shutdown, ROSInterruptException
 from sensor_msgs.msg import Imu, LaserScan
 from std_msgs.msg import Float32, Float32MultiArray
+from geometry_msg.msg import Vector3
 from barc.msg import ECU, Encoder
 from math import pi
 from numpy import zeros, array
@@ -67,12 +68,14 @@ def imu_callback(data):
 
     yaw_local_prev = yaw_local
 
+def pose_callback(data):
+    global est_yaw = data.Z
 
 def laser_callback(data):
     global dist
     dist = data.ranges[0]
 
-
+"""
 def vel_callback(data):
     global vel_avg, prev_avg
     avg = (data.FL + data.FR)/2*np.cos(dx)
@@ -84,7 +87,9 @@ def vel_callback(data):
         new_avg = alpha * avg + (1-alpha) * prev_avg
     prev_avg = new_avg
     vel_avg = new_avg
-
+"""   
+   
+"""
 
 def range_callback(msg):
     global location
@@ -99,17 +104,19 @@ def range_callback(msg):
     else:
         location = x[0]  # the nearest x value
     print(location)
-
+"""
 
 def control():
-    global read_yaw0, yaw_local, location
+    global read_yaw0, yaw_local, est_yaw
+    # global location
 
     # initialize ROS node
     init_node('adas', anonymous=True)
     Subscriber('imu/data', Imu, imu_callback)
     Subscriber('scan', LaserScan, laser_callback)
-    Subscriber('vel_est', Encoder, vel_callback)
-    Subscriber('range', Float32MultiArray, range_callback)
+    # Subscriber('vel_est', Encoder, vel_callback)
+    # Subscriber('range', Float32MultiArray, range_callback)
+    Subscriber('pose_estimate', Vector3, pose_callback)
     ecu_pub = Publisher('ecu', ECU, queue_size=1)
     encoder_pub = Publisher('filtered_vel', Float32, queue_size=1)
     yaw_pub = Publisher('filtered_yaw', Float32, queue_size=1)
@@ -127,8 +134,8 @@ def control():
     while not is_shutdown():
         t0 = rospy.get_time()
         if scenario == "AEB":
-            if 0.0 < location < 15.0:     # for camera based detection
-            # if dist < 1:
+            # if 0.0 < location < 15.0:     # for camera based detection
+            if dist < 1:
                 if not aeb:
                     aeb = True
             else:
@@ -145,8 +152,8 @@ def control():
             if t_i >= 50:
                 (F, dx) = (0, 0)
             else:
-                if 0.0 < location < 15.0:  #  for camera based detection
-                # if dist < 1:
+                # if 0.0 < location < 15.0:  #  for camera based detection
+                if dist < 1:
                     if not trigger:
                         trigger = True
                         x1 = dist
@@ -158,15 +165,15 @@ def control():
                             pid.setPoint(30/57.3)
                             setReference = True
                             setReference1 = False
-                        (F, dx) = (0.3, pid.update(yaw_local, stime))
+                        (F, dx) = (3, pid.update(est_yaw, stime))
                     else:
                         if not setReference1:
                             pid.setPoint(0)
                             setReference1 = True
                             setReference = False
-                        (F, dx) = (0.3, pid.update(yaw_local, stime))
+                        (F, dx) = (3, pid.update(est_yaw, stime))
                 else:
-                    (F, dx) = (0.3, 0)
+                    (F, dx) = (3, 0)
                     trigger = False
                     setReference1 = False
                     setReference = False
