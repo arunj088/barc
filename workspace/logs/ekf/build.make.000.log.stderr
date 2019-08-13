@@ -1,19 +1,19 @@
-In file included from [01m[K/home/odroid/barc/workspace/src/EKF/linuxinitialize.cpp:8:0[m[K:
-[01m[K/home/odroid/barc/workspace/src/EKF/linuxinitialize.h:4:0:[m[K [01;35m[Kwarning: [m[K"_GNU_SOURCE" redefined
+In file included from [01m[K/home/adas/barc/workspace/src/EKF/ert_main.cpp:26:0[m[K:
+[01m[K/home/adas/barc/workspace/src/EKF/linuxinitialize.h:4:0:[m[K [01;35m[Kwarning: [m[K"_GNU_SOURCE" redefined
  #define _GNU_SOURCE
 [01;32m[K ^[m[K
 [01m[K<command-line>:0:0:[m[K [01;36m[Knote: [m[Kthis is the location of the previous definition
-[01m[K/home/odroid/barc/workspace/src/EKF/linuxinitialize.cpp:[m[K In function ‘[01m[Kvoid mw_CreateTask(void (*)(), const char*, int, int, int, int)[m[K’:
-[01m[K/home/odroid/barc/workspace/src/EKF/linuxinitialize.cpp:396:71:[m[K [01;35m[Kwarning: [m[Kinvalid conversion from ‘[01m[Kvoid*[m[K’ to ‘[01m[Kvoid* (*)(void*)[m[K’ [-fpermissive]
+In file included from [01m[K/home/adas/barc/workspace/src/EKF/linuxinitialize.cpp:8:0[m[K:
+[01m[K/home/adas/barc/workspace/src/EKF/linuxinitialize.h:4:0:[m[K [01;35m[Kwarning: [m[K"_GNU_SOURCE" redefined
+ #define _GNU_SOURCE
+[01;32m[K ^[m[K
+[01m[K<command-line>:0:0:[m[K [01;36m[Knote: [m[Kthis is the location of the previous definition
+[01m[K/home/adas/barc/workspace/src/EKF/linuxinitialize.cpp:[m[K In function ‘[01m[Kvoid mw_CreateTask(void (*)(), const char*, int, int, int, int)[m[K’:
+[01m[K/home/adas/barc/workspace/src/EKF/linuxinitialize.cpp:396:71:[m[K [01;35m[Kwarning: [m[Kinvalid conversion from ‘[01m[Kvoid*[m[K’ to ‘[01m[Kvoid* (*)(void*)[m[K’ [-fpermissive]
      status = pthread_create(&thread, &attr, (void *) taskHandler, NULL);
 [01;32m[K                                                                       ^[m[K
-In file included from [01m[K/home/odroid/barc/workspace/src/EKF/linuxinitialize.h:11:0[m[K,
-                 from [01m[K/home/odroid/barc/workspace/src/EKF/linuxinitialize.cpp:8[m[K:
+In file included from [01m[K/home/adas/barc/workspace/src/EKF/linuxinitialize.h:11:0[m[K,
+                 from [01m[K/home/adas/barc/workspace/src/EKF/linuxinitialize.cpp:8[m[K:
 [01m[K/usr/include/pthread.h:233:12:[m[K [01;36m[Knote: [m[K  initializing argument 3 of ‘[01m[Kint pthread_create(pthread_t*, const pthread_attr_t*, void* (*)(void*), void*)[m[K’
  extern int pthread_create (pthread_t *__restrict __newthread,
 [01;32m[K            ^[m[K
-In file included from [01m[K/home/odroid/barc/workspace/src/EKF/ert_main.cpp:26:0[m[K:
-[01m[K/home/odroid/barc/workspace/src/EKF/linuxinitialize.h:4:0:[m[K [01;35m[Kwarning: [m[K"_GNU_SOURCE" redefined
- #define _GNU_SOURCE
-[01;32m[K ^[m[K
-[01m[K<command-line>:0:0:[m[K [01;36m[Knote: [m[Kthis is the location of the previous definition

@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99174e67-9b1d-48b2-b07f-320503456b52" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.catkin_tools/profiles/default/packages/barc/devel_manifest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.catkin_tools/profiles/default/packages/barc/devel_manifest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.catkin_tools/profiles/default/packages/catkin_tools_prebuild/devel_manifest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.catkin_tools/profiles/default/packages/catkin_tools_prebuild/devel_manifest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.catkin_tools/profiles/default/packages/data_service/devel_manifest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.catkin_tools/profiles/default/packages/data_service/devel_manifest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.catkin_tools/profiles/default/packages/ekf/devel_manifest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.catkin_tools/profiles/default/packages/ekf/devel_manifest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.catkin_tools/profiles/default/packages/labs/devel_manifest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.catkin_tools/profiles/default/packages/labs/devel_manifest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/ekf/build.make.000.log.stderr" beforeDir="false" afterPath="$PROJECT_DIR$/logs/ekf/build.make.000.log.stderr" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,37 +20,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/barc/src/estimation/system_models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3420">
-              <caret line="230" selection-start-line="230" selection-end-line="230" />
-              <folding>
-                <element signature="e#785#836#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/barc/src/estimation/ekf_Dyn_linear.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2310">
-              <caret line="164" column="37" selection-start-line="164" selection-start-column="37" selection-end-line="164" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file:///opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/barc/launch/test.launch">
           <provider selected="true" editor-type-id="text-editor">
@@ -51,11 +30,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/barc/src/controller_low_level.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+            <state relative-caret-position="78">
+              <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+              <folding>
+                <element signature="e#1002#1063#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,10 +56,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/barc/src/estimation/ekf_Dyn.py" />
-        <option value="$PROJECT_DIR$/src/barc/src/controller_low_level.py" />
-        <option value="$PROJECT_DIR$/src/barc/src/estimation/system_models.py" />
         <option value="$PROJECT_DIR$/src/barc/launch/test.launch" />
         <option value="$PROJECT_DIR$/src/barc/src/estimation/ekf_Dyn_linear.py" />
+        <option value="$PROJECT_DIR$/src/barc/src/estimation/system_models.py" />
+        <option value="$PROJECT_DIR$/src/barc/src/controller_low_level.py" />
       </list>
     </option>
   </component>
@@ -92,7 +74,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -159,14 +140,36 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="estimation" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="workspace" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tensorflow_object_detector" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="workspace" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tensorflow_object_detector" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="workspace" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tensorflow_object_detector" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/devel/lib/python2.7" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -296,9 +299,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-11" width="1922" height="1029" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="1204" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26894343" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26855895" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -318,6 +321,27 @@
       <window_info anchor="right" id="R Graphics" order="3" />
       <window_info anchor="right" id="R Packages" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26855895" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4994664" weight="0.32997763" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4994664" weight="0.39932886" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4994664" weight="0.32997763" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32997763" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49733192" weight="0.3277405" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50053364" side_tool="true" weight="0.39932886" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49893278" weight="0.32997763" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="right" id="R Packages" order="4" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -393,20 +417,27 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/barc/src/estimation/ekf_Dyn.py" />
-    <entry file="file://$PROJECT_DIR$/src/barc/src/estimation/system_models.py">
+    <entry file="file:///opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3420">
-          <caret line="230" selection-start-line="230" selection-end-line="230" />
-          <folding>
-            <element signature="e#785#836#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="161">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/barc/src/estimation/ekf_Dyn_linear.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2310">
-          <caret line="164" column="37" selection-start-line="164" selection-start-column="37" selection-end-line="164" selection-end-column="37" />
+        <state relative-caret-position="992">
+          <caret line="164" selection-start-line="164" selection-end-line="164" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/barc/src/estimation/system_models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="188" lean-forward="true" selection-start-line="188" selection-end-line="188" />
+          <folding>
+            <element signature="e#785#836#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -419,15 +450,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/barc/src/controller_low_level.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="78">
+          <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+          <folding>
+            <element signature="e#1002#1063#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

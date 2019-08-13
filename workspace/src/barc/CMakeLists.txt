@@ -55,6 +55,8 @@ add_message_files(
    Input.msg
    barc_state.msg
    Moving.msg
+   array1d.msg
+   Lanepoints.msg
 )
 
 ## Generate services in the 'srv' folder
