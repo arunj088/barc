@@ -45,7 +45,7 @@ def pwm_converter_callback(msg):
     if FxR > 0:
         motor_pwm   =  FxR + 94.0
     elif FxR == 0:
-        motor_pwm = 90
+        motor_pwm = 90-30
     else:
         motor_pwm = 90-30
     update_arduino()
