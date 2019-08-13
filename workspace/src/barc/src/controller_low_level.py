@@ -42,8 +42,12 @@ def pwm_converter_callback(msg):
 
     # compute motor command
     FxR         =  float(msg.motor) 
-    motor_pwm   =  FxR + 94.0
-	
+    if FxR > 0:
+    	motor_pwm   =  FxR + 94.0
+    elif FxR == 0:
+	motor_pwm = 90
+    else:
+	motor_pwm = 90-30
     update_arduino()
 
 def neutralize():
