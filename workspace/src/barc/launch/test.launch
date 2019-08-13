@@ -30,8 +30,8 @@
         <param name="video_device" value="/dev/video6"/>
         <param name="image_width" value="640"/>
         <param name="image_height" value="480"/>
-		<!--<param name="brightness" value="50" />-->
-		<!--<param name="contrast" value="60" />-->
+	<param name="brightness" value="50" />
+	<param name="contrast" value="60" />
    </node>
 	<node name="image_proc" pkg="image_proc" type="image_proc" ns="barc_cam"/>
 
@@ -48,20 +48,23 @@
         <param name="port" value="/dev/ttyUSB0" />
     </node>
 
+<!-- ekf_node_matlab -->
+    <node pkg="ekf" type="ekf_node" name="ekf" />
+
 <!-- OBSERVER-->
     <!-- group ns="state_estimation"> -->
-    <node pkg="barc" type="ekf_Dyn_linear.py" name="state_estimation">
-        <!-- v_x estimation sample time-->
-        <param name="dt_v_enc" type="double" value="0.2" />
-        <param name="v_x_min" type="double" value="0.2" />
+<!--    <node pkg="barc" type="ekf_Dyn_linear.py" name="state_estimation"> -->
+        <!-- v_x estimation sample time--> 
+<!--        <param name="dt_v_enc" type="double" value="0.2" /> -->
+<!--        <param name="v_x_min" type="double" value="0.2" /> -->
         <!-- ekf properties -->
-        <param name="q_std" type="double" value="0.01" />
-        <param name="r_std_r" type="double" value="0.57" />
-        <param name="r_std_v" type="double" value="1.2767" />
+<!--        <param name="q_std" type="double" value="0.01" /> -->
+<!--        <param name="r_std_r" type="double" value="0.57" /> -->
+<!--        <param name="r_std_v" type="double" value="1.2767" /> -->
     <!-- </group> -->
-    </node>
+<!--    </node> -->
 
-		
+    <node pkg="barc" type="time.py" name="clock" output="screen" />		
 <!-- LOW LEVEL CONTROLLER -->
     <node pkg="barc" type="controller_low_level.py" name="low_level_controller" output="screen"/>
 </launch>
