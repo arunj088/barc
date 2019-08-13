@@ -64,7 +64,7 @@
     <!-- </group> -->
 <!--    </node> -->
 
-    <node pkg="barc" type="time.py" name="clock" output="screen" />		
+<!--    <node pkg="barc" type="time.py" name="clock" output="screen" /> -->
 <!-- LOW LEVEL CONTROLLER -->
     <node pkg="barc" type="controller_low_level.py" name="low_level_controller" output="screen"/>
 </launch>
