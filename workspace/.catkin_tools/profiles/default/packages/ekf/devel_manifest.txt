@@ -1,5 +1,0 @@
-EKF
-/home/adas/barc/workspace/devel/.private/ekf/lib/ekf/ekf_node /home/adas/barc/workspace/devel/lib/ekf/ekf_node
-/home/adas/barc/workspace/devel/.private/ekf/lib/pkgconfig/ekf.pc /home/adas/barc/workspace/devel/lib/pkgconfig/ekf.pc
-/home/adas/barc/workspace/devel/.private/ekf/share/ekf/cmake/ekfConfig-version.cmake /home/adas/barc/workspace/devel/share/ekf/cmake/ekfConfig-version.cmake
-/home/adas/barc/workspace/devel/.private/ekf/share/ekf/cmake/ekfConfig.cmake /home/adas/barc/workspace/devel/share/ekf/cmake/ekfConfig.cmake
