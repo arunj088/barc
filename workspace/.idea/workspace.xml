@@ -2,10 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99174e67-9b1d-48b2-b07f-320503456b52" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../MATLAB/packages/barc/msg/ECU.msg" beforeDir="false" afterPath="$PROJECT_DIR$/../MATLAB/packages/barc/msg/ECU.msg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MATLAB/packages/barc/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MATLAB/packages/barc/package.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.catkin_tools/profiles/default/devel_collisions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.catkin_tools/profiles/default/devel_collisions.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.catkin_tools/profiles/default/packages/barc/devel_manifest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.catkin_tools/profiles/default/packages/barc/devel_manifest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.catkin_tools/profiles/default/packages/ekf/devel_manifest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.catkin_tools/profiles/default/packages/ekf/devel_manifest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/ekf/build.make.001.log.stderr" beforeDir="false" afterPath="$PROJECT_DIR$/logs/ekf/build.make.001.log.stderr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EKF/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/EKF/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EKF/EKF.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/EKF/EKF.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EKF/EKF.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/EKF/EKF.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EKF/EKF_data.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/EKF/EKF_data.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EKF/EKF_private.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/EKF/EKF_private.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EKF/EKF_types.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/EKF/EKF_types.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EKF/MW_custom_RTOS_header.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/EKF/MW_custom_RTOS_header.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EKF/defines.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/EKF/defines.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EKF/ert_main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/EKF/ert_main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EKF/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/EKF/package.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EKF/rtGetInf.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/EKF/rtGetInf.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EKF/rtGetInf.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/EKF/rtGetInf.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EKF/rtGetNaN.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/EKF/rtGetNaN.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EKF/rtGetNaN.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/EKF/rtGetNaN.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EKF/rt_nonfinite.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/EKF/rt_nonfinite.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EKF/rt_nonfinite.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/EKF/rt_nonfinite.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EKF/rtmodel.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/EKF/rtmodel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EKF/rtwtypes.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/EKF/rtwtypes.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EKF/slros_busmsg_conversion.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/EKF/slros_busmsg_conversion.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EKF/slros_busmsg_conversion.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/EKF/slros_busmsg_conversion.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EKF/slros_initialize.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/EKF/slros_initialize.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EKF/slros_initialize.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/EKF/slros_initialize.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,24 +41,30 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/barc/launch/test.launch">
+        <entry file="file://$PROJECT_DIR$/src/tensorflow_object_detector/scripts/vdetect_barc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="55" column="58" selection-start-line="55" selection-start-column="58" selection-end-line="55" selection-end-column="58" />
+            <state relative-caret-position="2955">
+              <caret line="214" column="8" selection-start-line="214" selection-start-column="8" selection-end-line="214" selection-end-column="8" />
+              <folding>
+                <element signature="e#10030#10077#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tensorflow_object_detector/scripts/vdetect_ros.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tensorflow_object_detector/scripts/lane_detect.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/barc/src/controller_low_level.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-              <folding>
-                <element signature="e#1002#1063#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/tensorflow_object_detector/launch/camera_detect.launch">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -49,19 +80,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/barc/src/estimation/ekf_Dyn.py" />
-        <option value="$PROJECT_DIR$/src/barc/launch/test.launch" />
-        <option value="$PROJECT_DIR$/src/barc/src/estimation/ekf_Dyn_linear.py" />
-        <option value="$PROJECT_DIR$/src/barc/src/estimation/system_models.py" />
-        <option value="$PROJECT_DIR$/src/barc/src/controller_low_level.py" />
+        <option value="$PROJECT_DIR$/src/tensorflow_object_detector/scripts/vdetect_barc.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="2328" />
     <option name="y" value="-4" />
-    <option name="width" value="1920" />
-    <option name="height" value="1021" />
+    <option name="width" value="1400" />
+    <option name="height" value="1028" />
   </component>
+  <component name="ProjectId" id="1QNoLRXNEyqhH8SrRUsegHdOpQI" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -79,67 +108,20 @@
             <path>
               <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
               <item name="workspace" type="462c0819:PsiDirectoryNode" />
-              <item name="devel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace" type="462c0819:PsiDirectoryNode" />
-              <item name="devel" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace" type="462c0819:PsiDirectoryNode" />
-              <item name="devel" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="python2.7" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="barc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="barc" type="462c0819:PsiDirectoryNode" />
-              <item name="launch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="barc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="barc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="control" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="barc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="estimation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
               <item name="workspace" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="tensorflow_object_detector" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="workspace" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tensorflow_object_detector" type="462c0819:PsiDirectoryNode" />
+              <item name="launch" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
@@ -147,13 +129,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="tensorflow_object_detector" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workspace" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="tensorflow_object_detector" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -164,7 +139,7 @@
   <component name="PropertiesComponent">
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -178,8 +153,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="ekf_Dyn_linear" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.lane_detect">
+    <configuration name="lane_detect" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="workspace" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -187,11 +162,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/barc/src/estimation" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/tensorflow_object_detector/scripts" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/barc/src/estimation/ekf_Dyn_linear.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/tensorflow_object_detector/scripts/lane_detect.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -200,9 +175,78 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="lane_detect_barc" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="workspace" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/tensorflow_object_detector/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/tensorflow_object_detector/scripts/lane_detect_barc.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="vdetect_barc" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="workspace" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/tensorflow_object_detector/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/tensorflow_object_detector/scripts/vdetect_barc.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="vdetect_ros" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="workspace" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/tensorflow_object_detector/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/tensorflow_object_detector/scripts/vdetect_ros.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="vdetect_ros (2)" type="ros_launch_run_config_type_id" factoryName="ROS Launch" temporary="true">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.ekf_Dyn_linear" />
+        <item itemvalue="Python.lane_detect" />
+        <item itemvalue="Python.vdetect_ros" />
+        <item itemvalue="Python.lane_detect_barc" />
+        <item itemvalue="Python.vdetect_barc" />
       </list>
     </recent_temporary>
   </component>
@@ -283,60 +327,28 @@
     <option name="localTasksCounter" value="10" />
     <servers />
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1857" height="1212" extended-state="6" />
-    <editor active="true" />
+    <frame x="1984" y="-11" width="1857" height="1092" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26855895" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18777293" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4994664" weight="0.32997763" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4994664" weight="0.39932886" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3291536" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4994664" weight="0.32997763" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32997763" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49733192" weight="0.3277405" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50053364" side_tool="true" weight="0.39932886" />
-      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49893278" weight="0.32997763" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3291536" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="R Graphics" order="3" />
-      <window_info anchor="right" id="R Packages" order="4" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26855895" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4994664" weight="0.32997763" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4994664" weight="0.39932886" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4994664" weight="0.32997763" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32997763" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49733192" weight="0.3277405" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50053364" side_tool="true" weight="0.39932886" />
-      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49893278" weight="0.32997763" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="R Graphics" order="3" />
-      <window_info anchor="right" id="R Packages" order="4" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -350,14 +362,7 @@
               <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
                 <collection />
               </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
@@ -379,6 +384,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/src/tensorflow_object_detector" />
+    </ignored-roots>
     <MESSAGE value="changed the test.launch file" />
     <MESSAGE value="modified ekf_Dyn_linear.py" />
     <MESSAGE value="added pose estimation publisher to ekf_Dyn_linear.py" />
@@ -392,66 +400,33 @@
           <line>119</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/tensorflow_object_detector/scripts/vdetect_ros.py</url>
+          <line>123</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/barc/src/estimation/ekf_Kin.py">
+    <entry file="file://$PROJECT_DIR$/src/tensorflow_object_detector/scripts/vdetect_barc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-853" />
+        <state relative-caret-position="2955">
+          <caret line="214" column="8" selection-start-line="214" selection-start-column="8" selection-end-line="214" selection-end-column="8" />
+          <folding>
+            <element signature="e#10030#10077#0" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/barc/launch/control/ekf_KinBkMdl.launch">
+    <entry file="file://$PROJECT_DIR$/src/tensorflow_object_detector/scripts/vdetect_ros.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/barc/launch/control/ekf_DynBkMdl.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="37" column="11" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="37" selection-end-column="11" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/tensorflow_object_detector/scripts/lane_detect.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/barc/src/estimation/ekf_Dyn.py" />
-    <entry file="file:///opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/barc/src/estimation/ekf_Dyn_linear.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="992">
-          <caret line="164" selection-start-line="164" selection-end-line="164" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/barc/src/estimation/system_models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="188" lean-forward="true" selection-start-line="188" selection-end-line="188" />
-          <folding>
-            <element signature="e#785#836#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/barc/launch/test.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="58" selection-start-line="55" selection-start-column="58" selection-end-line="55" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/barc/src/controller_low_level.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-          <folding>
-            <element signature="e#1002#1063#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/tensorflow_object_detector/launch/camera_detect.launch">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
